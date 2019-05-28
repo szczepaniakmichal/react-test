@@ -14,9 +14,9 @@ export default class App extends React.Component {
     return(
       <div>
         <p>comA</p>
-        <ComB title ='state na przykładize licznika'/>
+        <ComB title ='state na przykładzie licznika'/>
         <ComC title = 'event - interakcja z komponentami'/>
-        <ComD title = 'state na przykładize formularza'/>
+        <ComD title = 'state na przykładzie formularza'/>
         <ComE title = 'cykl życia komponentu - zegar'/>
         <ComF title = 'static list contact'/>
       </div>
