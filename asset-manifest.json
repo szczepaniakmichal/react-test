@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/szczepaniakmichal.github.io/react-test/static/css/main.6214cd8e.chunk.css",
-    "main.js": "/szczepaniakmichal.github.io/react-test/static/js/main.9867262e.chunk.js",
-    "main.js.map": "/szczepaniakmichal.github.io/react-test/static/js/main.9867262e.chunk.js.map",
-    "runtime~main.js": "/szczepaniakmichal.github.io/react-test/static/js/runtime~main.7963b5ad.js",
-    "runtime~main.js.map": "/szczepaniakmichal.github.io/react-test/static/js/runtime~main.7963b5ad.js.map",
-    "static/js/2.d6a534e5.chunk.js": "/szczepaniakmichal.github.io/react-test/static/js/2.d6a534e5.chunk.js",
-    "static/js/2.d6a534e5.chunk.js.map": "/szczepaniakmichal.github.io/react-test/static/js/2.d6a534e5.chunk.js.map",
-    "index.html": "/szczepaniakmichal.github.io/react-test/index.html",
-    "precache-manifest.66654a37b4a6fa329e58f81836eae945.js": "/szczepaniakmichal.github.io/react-test/precache-manifest.66654a37b4a6fa329e58f81836eae945.js",
-    "service-worker.js": "/szczepaniakmichal.github.io/react-test/service-worker.js",
-    "static/css/main.6214cd8e.chunk.css.map": "/szczepaniakmichal.github.io/react-test/static/css/main.6214cd8e.chunk.css.map"
+    "main.css": "/react-test/static/css/main.6214cd8e.chunk.css",
+    "main.js": "/react-test/static/js/main.954e479f.chunk.js",
+    "main.js.map": "/react-test/static/js/main.954e479f.chunk.js.map",
+    "runtime~main.js": "/react-test/static/js/runtime~main.b9ad4e01.js",
+    "runtime~main.js.map": "/react-test/static/js/runtime~main.b9ad4e01.js.map",
+    "static/js/2.d6a534e5.chunk.js": "/react-test/static/js/2.d6a534e5.chunk.js",
+    "static/js/2.d6a534e5.chunk.js.map": "/react-test/static/js/2.d6a534e5.chunk.js.map",
+    "index.html": "/react-test/index.html",
+    "precache-manifest.3b25535d6825d2a280a536c42274e2cb.js": "/react-test/precache-manifest.3b25535d6825d2a280a536c42274e2cb.js",
+    "service-worker.js": "/react-test/service-worker.js",
+    "static/css/main.6214cd8e.chunk.css.map": "/react-test/static/css/main.6214cd8e.chunk.css.map"
   }
 }
