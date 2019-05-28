@@ -2,7 +2,7 @@
   "name": "course-reacts-npx",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/szczepaniakmichal.github.io/react-test",
+  "homepage": "https://szczepaniakmichal.github.io/react-test/",
   "dependencies": {
     "create-components-react": "^2.1.4",
     "moment": "^2.24.0",
