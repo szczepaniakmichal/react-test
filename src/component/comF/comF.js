@@ -1,7 +1,7 @@
 import * as React from 'react'
 
 
-const allUsers = [ 'Julia', 'Michał', 'Natasza', 'Paulina', 'Bartłomiej', 'Staś', 'Albert' ];
+const allUsers = [ 'Marcin', 'Ania', 'Agnieszka', 'Julia', 'Michał', 'Natasza', 'Paulina', 'Bartłomiej', 'Staś', 'Albert' ];
 
 export default class ComF extends React.Component {
   constructor(){
