@@ -4,9 +4,11 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
+const startValue = 0;
+
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <App result={startValue}/>
   </React.StrictMode>,
   document.getElementById('root')
 );
