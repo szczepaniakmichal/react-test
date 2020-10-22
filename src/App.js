@@ -48,7 +48,7 @@ const handleMathClick = (type, number = 1) => {
                 click={handleMathClick}
             />
             <MathBtn
-                name='-10'
+                name='+10'
                 number={10}
                 type={add}
                 click={handleMathClick}
