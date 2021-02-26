@@ -1,29 +1,76 @@
-.total-price {
-    padding: 20px;
-}
-
-.total-price__flex {
-    display: flex;
-    align-items: center;
-    margin: 0 auto;
-    width: max-content;
-}
-
-.total-price__price {
-    font-weight: 700;
-}
-
-.total-price__btn-btn {
-    appearance: none;
-    background-color: rgb(204, 0, 0);
-    color: #fff;
-    font-weight: 700;
-    font-size: 18px;
+.drop-down-button {
+    position: relative;
+    width: 100px;
+    margin-left: 100px;
     padding: 10px;
-    border: none;
-    border-radius: 5px;
+    border: 1px solid #c7c7c7;
+    border-radius: 4px;
 }
 
-.total-price__btn-btn:hover {
-    background-color: rgb(170, 0, 0);;
+.drop-down-button:hover {
+    background-color: rgb(244, 244, 244);;
+    border-color: #000;
+}
+
+.drop-down-button__value {
+
+}
+
+.drop-down-button__arrow {
+    margin-left: 30px;
+}
+
+.drop-down-menu {
+    position: absolute;
+    background: #FFFFFF;
+    border: 1px solid #ccc;
+    padding: 0 10px;
+    left: 50%;
+    width: 180px;
+    margin-left: -100px;
+}
+
+.drop-down-menu__item {
+    padding: 10px;
+    font-size: 16px;
+    list-style: none;
+    border-bottom: 1px solid rgb(51, 51, 51);
+}
+
+.drop-down-menu__item:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.drop-down-menu__item:last-child {
+    border: none;
+}
+
+.drop-down-menu:after,
+.drop-down-menu:before {
+    bottom: 100%;
+    left: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+}
+.drop-down-menu:after {
+    border-color: rgba(136, 183, 213, 0);
+    border-bottom-color: #FFFFFF;
+    border-width: 10px;
+    margin-left: -10px;
+}
+.drop-down-menu:before {
+    border-color: rgba(194, 225, 245, 0);
+    border-bottom-color: #ccc;
+    border-width: 12px;
+    margin-left: -12px;
+}
+
+.swiper-slide {
+    max-width: 300px;
+    height: 300px;
 }
