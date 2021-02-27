@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import ReactDOM from 'react-dom'
 
-import Gallery from './Gallery';
+import BtnContainer from './BtnContainer';
 
 // import { AppContext, contextBbj } from "./context/AppContext";
 import AppProvider from './context/AppContext';
@@ -17,7 +17,7 @@ const App = () => (
             //     toggleUrl
             // }}
         >
-            <Gallery />
+            <BtnContainer />
         </AppProvider>
     </div>
 )

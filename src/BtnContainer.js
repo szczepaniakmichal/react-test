@@ -2,14 +2,14 @@ import React, { useRef } from "react";
 
 import TestProvider from "./testProvider";
 import { AppContext } from "./context/AppContext";
+import { MainBtn } from "./components/buttons/MainBtn";
 
-const Gallery = () => {
+const BtnContainer = () => {
     const refButton1 = useRef();
 
     const click = (e) => {
         console.log(e.target)
         refButton1.current.click();
-
     }
 
     return (
@@ -30,6 +30,9 @@ const Gallery = () => {
                         </button>
 
                         <button onClick={toggleUrl} className="btn">btn 3 - change host</button>
+                        <MainBtn name={'btn-3'} toggleUrl={toggleUrl}/>
+                        <MainBtn />
+
                         <TestProvider />
                     </>
                 )
@@ -38,5 +41,5 @@ const Gallery = () => {
     )
 }
 
-export default Gallery;
+export default BtnContainer;
 
