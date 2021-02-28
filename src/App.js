@@ -1,31 +1,21 @@
-import React, { useState, useRef, useEffect } from 'react';
-import ReactDOM from 'react-dom'
+import React, { Suspense } from 'react';
+import { useTranslation } from 'react-i18next';
 
-import BtnContainer from './BtnContainer';
+import { LanguageSelector } from './components/translation/LanguageSelector'
 
-// import { AppContext, contextBbj } from "./context/AppContext";
-import AppProvider from './context/AppContext';
+function MyComponent() {
+    const { t, i18n } = useTranslation();
 
-import './App.css';
+    return <h1>{t('title')}</h1>
+}
 
-
-const App = () => (
-    <div>
-        <AppProvider
-            //     value={{
-            //     url,
-            //     toggleUrl
-            // }}
-        >
-            <BtnContainer />
-        </AppProvider>
-    </div>
-)
-    // const [url, setUrl] = useState('localhost')
-    // const toggleUrl = () => {
-    //     setUrl(url === 'localhost' ? 'testbox' : 'localhost')
-    // }
-
-
-
-export default App;
+// i18n translations might still be loaded by the http backend
+// use react's Suspense
+export default function App() {
+    return (
+        <Suspense fallback="loading">
+            <LanguageSelector />
+            <MyComponent />
+        </Suspense>
+    );
+}
