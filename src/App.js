@@ -18,13 +18,13 @@ export default function App() {
                         <nav>
                             <ul>
                                 <li>
-                                    <NavLink to="/" exact>strona glowna</NavLink>
+                                    <NavLink to="/" exact activeClassName="home-page">strona glowna</NavLink>
                                 </li>
                                 <li>
-                                    <NavLink to="/my-project">moje projekty</NavLink>
+                                    <NavLink to="/my-project" activeClassName="my-project-page">moje projekty</NavLink>
                                 </li>
                                 <li>
-                                    <NavLink to="/contact">kontakt</NavLink>
+                                    <NavLink to="/contact" activeClassName="contact-page">kontakt</NavLink>
                                 </li>
                             </ul>
                         </nav>
