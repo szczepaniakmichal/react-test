@@ -9,6 +9,31 @@ import { Contact } from "./components/route/contact";
 // use react's Suspense
 export default function App() {
     return (
-       <div>route</div>
+        <>
+            <Router>
+                <div>
+                    <header>
+                        <nav>
+                            <ul>
+                                <li>
+                                    <Link to="/">strona glowna</Link>
+                                </li>
+                                <li>
+                                    <Link to="/my-project">moje projekty</Link>
+                                </li>
+                                <li>
+                                    <Link to="/contact">kontakt</Link>
+                                </li>
+                            </ul>
+                        </nav>
+                    </header>
+                    <section>
+                        <Route path="/" component={Home}/>
+                        <Route path="/my-project" component={MyProject}/>
+                        <Route path="/contact" component={Contact}/>
+                    </section>
+                </div>
+            </Router>
+        </>
     );
 }
