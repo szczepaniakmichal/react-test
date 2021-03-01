@@ -1,9 +1,11 @@
 import React, { Suspense } from 'react';
-import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Link, NavLink, Route } from 'react-router-dom';
 
 import { Home } from './components/route/home'
 import { MyProject } from "./components/route/myProject";
 import { Contact } from "./components/route/contact";
+
+import './App.css';
 
 // i18n translations might still be loaded by the http backend
 // use react's Suspense
@@ -16,13 +18,13 @@ export default function App() {
                         <nav>
                             <ul>
                                 <li>
-                                    <Link to="/">strona glowna</Link>
+                                    <NavLink to="/" exact>strona glowna</NavLink>
                                 </li>
                                 <li>
-                                    <Link to="/my-project">moje projekty</Link>
+                                    <NavLink to="/my-project">moje projekty</NavLink>
                                 </li>
                                 <li>
-                                    <Link to="/contact">kontakt</Link>
+                                    <NavLink to="/contact">kontakt</NavLink>
                                 </li>
                             </ul>
                         </nav>
