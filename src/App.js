@@ -18,7 +18,7 @@ export default function App() {
                         <nav>
                             <ul>
                                 <li>
-                                    <NavLink to="/" exact activeClassName="home-page">strona glowna</NavLink>
+                                    <NavLink to="/" exact activeClassName="home-page" activeStyle={{backgroundColor: 'gray'}}>strona glowna</NavLink>
                                 </li>
                                 <li>
                                     <NavLink to="/my-project" activeClassName="my-project-page">moje projekty</NavLink>
