@@ -28,7 +28,7 @@ export default function App() {
                         </nav>
                     </header>
                     <section>
-                        <Route path="/" component={Home}/>
+                        <Route path="/" exact component={Home}/>
                         <Route path="/my-project" component={MyProject}/>
                         <Route path="/contact" component={Contact}/>
                     </section>
