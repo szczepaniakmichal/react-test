@@ -1,42 +1,31 @@
 import React from 'react';
 import { BrowserRouter as Router, NavLink, Route, Switch } from 'react-router-dom';
 
-import { Home } from './components/route/home'
-import { MyProject } from "./components/route/myProject";
-import { Contact } from "./components/route/contact";
-import { Error } from "./components/route/error";
-
 import './App.css';
+import { Navigation } from "./layouts/Navigation";
+import { Page } from "./layouts/Page";
+import { Header } from "./layouts/Header";
+import { Footer } from "./layouts/Footer";
 
 export default function App() {
     return (
         <>
             <Router>
-                <div>
+                <div className="app">
                     <header>
-                        <nav>
-                            <ul>
-                                <li>
-                                    <NavLink to="/" exact >strona glowna</NavLink>
-                                </li>
-                                <li>
-                                    <NavLink to="/my-project">moje projekty</NavLink>
-                                </li>
-                                <li>
-                                    <NavLink to="/contact">kontakt</NavLink>
-                                </li>
-                            </ul>
-                        </nav>
+                        <Header />
                     </header>
-                    <section>
-                        <Switch>
-                            <Route path="/" exact component={Home}/>
-                            <Route path="/my-project" component={MyProject}/>
-                            <Route path="/contact" component={Contact}/>
-                            <Route component={Error}/>
-                        </Switch>
-
-                    </section>
+                    <main>
+                        <aside>
+                            <Navigation />
+                        </aside>
+                        <section className="page">
+                            <Page />
+                        </section>
+                    </main>
+                    <footer>
+                        <Footer />
+                    </footer>
                 </div>
             </Router>
         </>
