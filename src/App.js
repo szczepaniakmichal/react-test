@@ -1,9 +1,10 @@
 import React from 'react';
-import { BrowserRouter as Router, NavLink, Route } from 'react-router-dom';
+import { BrowserRouter as Router, NavLink, Route, Switch } from 'react-router-dom';
 
 import { Home } from './components/route/home'
 import { MyProject } from "./components/route/myProject";
 import { Contact } from "./components/route/contact";
+import { Error } from "./components/route/error";
 
 import './App.css';
 
@@ -28,9 +29,13 @@ export default function App() {
                         </nav>
                     </header>
                     <section>
-                        <Route path="/" exact component={Home}/>
-                        <Route path="/my-project" component={MyProject}/>
-                        <Route path="/contact" component={Contact}/>
+                        <Switch>
+                            <Route path="/" exact component={Home}/>
+                            <Route path="/my-project" component={MyProject}/>
+                            <Route path="/contact" component={Contact}/>
+                            <Route component={Error}/>
+                        </Switch>
+
                     </section>
                 </div>
             </Router>
