@@ -16,13 +16,13 @@ export default function App() {
                         <nav>
                             <ul>
                                 <li>
-                                    <NavLink to="/" exact activeClassName="home-page" activeStyle={{backgroundColor: 'gray'}}>strona glowna</NavLink>
+                                    <NavLink to="/" exact >strona glowna</NavLink>
                                 </li>
                                 <li>
-                                    <NavLink to="/my-project" activeClassName="my-project-page">moje projekty</NavLink>
+                                    <NavLink to="/my-project">moje projekty</NavLink>
                                 </li>
                                 <li>
-                                    <NavLink to="/contact" activeClassName="contact-page">kontakt</NavLink>
+                                    <NavLink to="/contact">kontakt</NavLink>
                                 </li>
                             </ul>
                         </nav>
