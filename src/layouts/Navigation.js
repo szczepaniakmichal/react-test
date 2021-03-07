@@ -19,11 +19,13 @@ const nav = pagesList.map(page => (
 ));
 
 export const Navigation = () => (
-    <Route>
-        <nav className="main">
-            <ul>
-                {nav}
-            </ul>
-        </nav>
-    </Route>
+    <>
+        <Route>
+            <nav className="main">
+                <ul>
+                    {nav}
+                </ul>
+            </nav>
+        </Route>
+    </>
 )
