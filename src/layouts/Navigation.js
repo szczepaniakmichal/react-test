@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Route, NavLink } from "react-router-dom"
+import { NavLink, Route } from "react-router-dom"
 
 // import "../sass/Navigation.scss"
 
