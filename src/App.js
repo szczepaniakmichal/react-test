@@ -13,7 +13,7 @@ export default function App() {
         <>
             <Router>
                 <div className="app">
-                    <header>
+                    <header className="header">
                         <Header />
                     </header>
                     <main>
