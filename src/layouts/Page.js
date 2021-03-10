@@ -1,5 +1,19 @@
 import React from "react";
+import { Route, Switch } from 'react-router-dom';
+
+import { HomePage } from "../pages/HomePage";
+import { ProductPage } from "../pages/ProductPage";
+import { ContactPage } from "../pages/ContactPage";
+import { Admin } from "../pages/Admin";
+import { Error } from "../components/route/Error";
+
 
 export const Page = () => (
-    <div>Page</div>
+    <Switch>
+        <Route path='/' exact component={HomePage}/>
+        <Route path='/product' component={ProductPage}/>
+        <Route path='/contact' component={ContactPage}/>
+        <Route path='/admin' component={Admin} />
+        <Route component={Error} />
+    </Switch>
 )
