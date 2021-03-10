@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Prompt } from "react-router-dom";
 
 export const ContactPage = () => {
     const [value, setValue] = useState('');
@@ -23,6 +24,8 @@ export const ContactPage = () => {
                     />
                     <button>Wyślij</button>
                 </form>
+                <Prompt when={value}
+                        message="Wypełniasz formulasz, czy napewno chcesz wyjść? Zmiany zostana utracone"/>
             </div>
         </>
     )
