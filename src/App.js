@@ -12,7 +12,7 @@ export default function App() {
     const [meter, setMeter] = useState(0);
     const [pallet, setPallet] = useState(0);
 
-    const changeMeterToPallets = (e) => {
+    const changeMeterToPallet = (e) => {
         const nameClassUp = e.target.classList.contains('up');
         const nameClassDown = e.target.classList.contains('down');
         const value = Number(e.target.parentElement.querySelector('input').value);
@@ -43,6 +43,40 @@ export default function App() {
                 // if (value < 0) return;
                 setMeter( value);
                 setPallet(Math.ceil((value) / 60));
+            }
+        }
+    }
+
+    const changePalletToMeter = (e) => {
+        const nameClassUp = e.target.classList.contains('up');
+        const nameClassDown = e.target.classList.contains('down');
+        const value = Number(e.target.parentElement.querySelector('input').value);
+
+        console.log("nameClassup", nameClassUp)
+        console.log("nameClassdown", nameClassDown)
+        console.log("e add", e);
+        console.log("e increment", e.target.incremental);
+        console.log("e value", e.target.value);
+
+        if (nameClassUp) {
+            setMeter( (value + 1) * 60);
+            setPallet(value + 1);
+        }
+        if ( nameClassDown ){
+            if (value <= 0) return;
+            setMeter( (value - 1) * 60);
+            setPallet(value - 1);
+        }
+
+        if (e.target.localName === 'input') {
+            if (e.target.value > pallet) {
+                setMeter(value * 60);
+                setPallet(value);
+            }
+
+            if (e.target.value <= pallet) {
+                setMeter( value * 60);
+                setPallet(value);
             }
         }
     }
@@ -95,7 +129,7 @@ export default function App() {
                         <div className="counter-input-wrapper meter">
                             <div className="number-wrapper">
             <span className="up"
-onClick={(e) => changeMeterToPallets(e)}
+onClick={(e) => changeMeterToPallet(e)}
             />
                                 <input
                                     min="0"
@@ -105,12 +139,12 @@ onClick={(e) => changeMeterToPallets(e)}
                                     name="meterUp"
                                     onChange={(e) => {
                                         console.log("zmiana metrów")
-                                        changeMeterToPallets(e)
+                                        changeMeterToPallet(e)
                                     }
                                     }
                                 />
                                 <span className="down"
-                                      onClick={(e) => changeMeterToPallets(e)}
+                                      onClick={(e) => changeMeterToPallet(e)}
                                 />
 
                             </div>
@@ -125,9 +159,7 @@ onClick={(e) => changeMeterToPallets(e)}
                         <div className="counter-input-wrapper pallet">
                             <div className="number-wrapper">
             <span className="up"
-                  onClick={(e) => {
-                      // calcPalletsToMeter(e)
-                  }}
+                  onClick={(e) => changePalletToMeter(e)}
             />
                                 <input
                                     min="0"
@@ -136,14 +168,12 @@ onClick={(e) => changeMeterToPallets(e)}
                                     type="number"
                                     onChange={(e) => {
                                         console.log("zmiana palety")
-                                        // setPallet(e.target.value);
+                                        changePalletToMeter(e)
                                     }
                                     }
                                 />
                                 <span className="down"
-                                      onClick={(e) => {
-                                          // setPallet(pallet - 1);
-                                      }}
+                                      onClick={(e) => changePalletToMeter(e)}
                                 />
                             </div>
 
