@@ -1,11 +1,9 @@
 import React from "react";
 import { NavLink, Route } from "react-router-dom"
 
-// import "../sass/Navigation.scss"
-
 const pagesList = [
     { name: "start", path: '/', exact: true },
-    { name: "product", path: '/product' },
+    { name: "products", path: '/products' },
     { name: "contact", path: '/contact' },
     { name: "panel admina", path: '/admin' },
 ];
