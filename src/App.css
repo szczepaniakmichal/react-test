@@ -1075,9 +1075,27 @@ max-width: 200px;
     margin-top: 0;
     font-size: 20px;
     z-index: 1;
-    width: 15px;
-    height: 15px;
-    background-color: red; }
+    /*width: 15px;*/
+    /*height: 15px;*/
+    /*background-color: red; */
+}
+
+.arrow-up {
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid red;
+}
+
+.arrow-down {
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid red;
+}
+
 
 .number-wrapper .down {
     content: "\25BC";
@@ -1088,9 +1106,10 @@ max-width: 200px;
     margin-bottom: 0;
     font-size: 20px;
     z-index: 1;
-    width: 15px;
-    height: 15px;
-    background-color: blue; }
+    /*width: 15px;*/
+    /*height: 15px;*/
+    /*background-color: blue; */
+}
 
 .ReactModal__Overlay.ReactModal__Overlay--after-open {
     background-color: rgba(0, 0, 0, 0.3) !important; }
