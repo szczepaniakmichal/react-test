@@ -8,7 +8,7 @@ import './sass/app.scss'
 export default function App() {
     return (
         <>
-
+<p>tere fere</p>
         </>
     );
 }
