@@ -2,18 +2,19 @@ export const ADD = 'ADD';
 export const DELETE = 'DELETE';
 export const EDIT = 'EDIT';
 
-const addRate = ({author, comment, rate}) => (
+export const addRate = ({author, comment, rate}) => (
     {
         type: ADD,
         payload: {
             author,
             comment,
+            id: Math.floor(Math.random() * 10000),
             rate,
         }
     }
 );
 
-const deleteRate = id => (
+export const deleteRate = id => (
     {
         type: DELETE,
         payload: {
@@ -23,7 +24,7 @@ const deleteRate = id => (
 );
 
 // uzyto destrukturyzacji danych wejsciowych
-const editRate = (data) => (
+export const editRate = (data) => (
     {
         type: EDIT,
         payload: {
