@@ -85,7 +85,7 @@ export default function App() {
             <div className="gallery-container">
                 <ul className="gallery-list">
                     {images.map((image, i) => (
-                        <li>
+                        <li key={image.original}>
                             <img src={image.thumbnail}
                                  alt={i + 1}
                                 // onMouseOver={e => changeBiggerImage(e)}
