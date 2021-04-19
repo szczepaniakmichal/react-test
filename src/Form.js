@@ -25,7 +25,7 @@ const Form = ({
     const handleOnSubmit = (e) => {
 
         e.preventDefault();
-        if (!authorInput.length) return;
+        // if (!authorInput.length) return;
         const rateObject = {
             author: authorInput,
             comment: commentInput,
