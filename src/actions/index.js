@@ -4,3 +4,11 @@ export const carSelected = (car) => {
         payload: car,
     }
 };
+
+export const changePower = (horsePower) => {
+    console.log("changePower", horsePower);
+    return {
+        type: 'CAR_CHANGE_POWER',
+        payload: horsePower,
+    }
+}
