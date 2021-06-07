@@ -1,51 +1,41 @@
 import { combineReducers } from 'redux';
 
 const initialState = {
-    // cars: {brand: 'BMW', horsepower: '240', color: 'black'},
-
 
     cars: [
-        {brand: 'BMW', horsepower: '240', color: 'black'},
-        {brand: 'Audi', horsepower: '560', color: 'blue'},
-        {brand: 'Mercedes', horsepower: '330', color: 'silver'},
+        {brand: 'BMW', horsepower: '240', color: 'black', index: 0},
+        {brand: 'Audi', horsepower: '560', color: 'blue', index: 1},
+        {brand: 'Mercedes', horsepower: '330', color: 'silver', index: 2},
     ]
 }
 
 const carsReducer = () => {
     return initialState.cars;
     // return [
-    //     {brand: 'BMW', horsepower: '240', color: 'black'},
-    //     {brand: 'Audi', horsepower: '560', color: 'blue'},
+    //     {brand: 'BMW', horsepower: '240', color: 'black', index: 0},
+    //     {brand: 'Audi', horsepower: '560', color: 'blue', index: 1},
     // ]
 };
+
+// console.log("carsReducer()", carsReducer);
 
 const carSelectedReducer = (carSelected = null, action) => {
     if (action.type === 'CAR_SELECTED') {
         return action.payload;
     }
     return carSelected;
-}
+};
 
-const changePowerReducer = (state = initialState, action) => {
-    // console.table(state.cars);
-    // console.log("action payload", action.payload);
+const changePowerReducer = (state = initialState.cars, action) => {
     if (action.type === 'CAR_CHANGE_POWER') {
-        console.log(state)
-        return {
-            ...state,
-            // cars: state.cars.map((car, i) => ({...car, horsepower: action.payload}))
-
-
-            cars: state.cars && state.cars.map((car, i) => {
-                // if (action.payload.index === i) {
-                    return {
-                        ...car,
-                        quantity: action.payload,
-                    }
-                // }
-            })
-        }
-        // return state;
+        console.log("change power");
+        const i = action.index;
+        console.log("action.index",action.index)
+        return [
+            ...state.slice(0, i),
+            {...state[i], horsepower: action.payload},
+            ...state.slice(i + 1)
+        ]
     }
     return state;
 }

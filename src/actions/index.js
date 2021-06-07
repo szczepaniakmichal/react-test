@@ -5,10 +5,12 @@ export const carSelected = (car) => {
     }
 };
 
-export const changePower = (horsePower) => {
+// zobacz 00:23
+export const changePower = (horsePower, index) => {
     console.log("changePower", horsePower);
     return {
         type: 'CAR_CHANGE_POWER',
         payload: horsePower,
+        index,
     }
 }
